@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="A responsive application that dynamically updates text using JavaScript.">
+
+    <title>Smart Text Studio</title>
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header class="app-header">
+            <div class="logo">S</div>
+
+            <div>
+                <h1>Smart Text Studio</h1>
+                <p class="subtitle">
+                    Interactive Text Experience
+                </p>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <span class="badge">JAVASCRIPT PROJECT</span>
+
+            <h2>Make your words come alive.</h2>
+
+            <p>
+                Enter your name and see your personalized message
+                update instantly.
+            </p>
+        </section>
+
+        <section class="editor-card">
+
+            <label for="nameInput">Your Name</label>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Enter your name..."
+                maxlength="50"
+                autocomplete="name"
+            >
+
+            <p id="feedback" class="feedback" role="status"></p>
+
+            <div class="button-group">
+                <button id="updateButton" class="primary-button">
+                    Update Message
+                </button>
+
+                <button id="resetButton" class="secondary-button">
+                    Reset
+                </button>
+            </div>
+
+        </section>
+
+        <section class="preview-card" aria-live="polite">
+
+            <div class="preview-header">
+                <span class="status-dot"></span>
+                LIVE PREVIEW
+            </div>
+
+            <h3 id="output">
+                Hello! Welcome to Smart Text Studio.
+            </h3>
+
+            <p class="preview-description">
+                Your personalized message will appear here.
+            </p>
+
+        </section>
+
+        <footer>
+            <p>Built with HTML, CSS & JavaScript</p>
+            <p>Experiment 02 · Responsive Web Design</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

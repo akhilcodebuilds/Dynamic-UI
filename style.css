@@ -1,0 +1,301 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff, #e0f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+    color: #1e293b;
+}
+
+/* Main application container */
+.app-container {
+    width: 100%;
+    max-width: 720px;
+    background: #ffffff;
+    padding: 36px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(30, 41, 59, 0.12);
+    animation: fadeIn 0.7s ease;
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.app-header h1 {
+    font-size: 23px;
+    font-weight: 750;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Welcome section */
+.welcome-section {
+    margin-bottom: 28px;
+}
+
+.badge {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+}
+
+.welcome-section h2 {
+    font-size: clamp(25px, 5vw, 36px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.welcome-section > p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Input editor card */
+.editor-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.editor-card label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.editor-card input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 11px;
+    outline: none;
+    background: #ffffff;
+    font-size: 15px;
+    color: #1e293b;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.editor-card input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.editor-card input::placeholder {
+    color: #94a3b8;
+}
+
+/* Validation feedback */
+.feedback {
+    min-height: 22px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #dc2626;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+.primary-button {
+    flex: 1;
+    background: linear-gradient(135deg, #6366f1, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.2);
+}
+
+.primary-button:hover {
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.secondary-button {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.secondary-button:hover {
+    background: #cbd5e1;
+}
+
+/* Live preview */
+.preview-card {
+    margin-top: 24px;
+    padding: 25px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    border: 1px solid #e0e7ff;
+    overflow-wrap: anywhere;
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #6366f1;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 18px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.preview-card h3 {
+    font-size: clamp(20px, 4vw, 27px);
+    line-height: 1.5;
+    color: #312e81;
+    transition: opacity 0.2s;
+}
+
+.preview-description {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 28px;
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet and mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 18px 12px;
+        align-items: flex-start;
+    }
+
+    .app-container {
+        padding: 23px 18px;
+        border-radius: 19px;
+    }
+
+    .app-header {
+        margin-bottom: 28px;
+    }
+
+    .app-header h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .editor-card {
+        padding: 18px;
+    }
+
+    .preview-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
